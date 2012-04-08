@@ -14,15 +14,7 @@ Gem::Specification.new do |s|
   s.email = "ricard@forniol.cat"
 
   # = MANIFEST =
-  s.files = %w[
-    COPYING
-    Gemfile
-    barcode_dispatcher.gemspec
-    lib/barcode_dispatcher/base.rb
-    lib/barcode_dispatcher/middleware.rb
-    lib/barcode_dispatcher.rb
-    config.ru
-  ]
+  s.files = `git ls-files`.split("\n")
 
   s.extra_rdoc_files = %w[COPYING]
 
