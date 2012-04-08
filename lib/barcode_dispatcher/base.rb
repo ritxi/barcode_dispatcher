@@ -17,8 +17,6 @@ module BarcodeDispatcher
 
     def initialize(code, params = {})
       @code = code
-      p code
-      p params
       @labeled = BarcodeDispatcher.labeled
       @height = BarcodeDispatcher.height
       @margin = 0
