@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rack', '>= 1.4.1'
   s.add_dependency 'rmagick', '>= 2.13.1'
   s.add_dependency 'barby', '>= 0.5.0'
+  s.add_dependency 'activesupport', '>= 3.0.12'
 
   s.require_paths = %w[lib]
   s.rubygems_version = '1.1.1'

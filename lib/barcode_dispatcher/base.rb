@@ -19,8 +19,8 @@ module BarcodeDispatcher
       @code = code
       p code
       p params
-      @labeled = params[:labeled] == 'false' ? false : true
-      @height = (params[:height] || 40).to_i
+      @labeled = BarcodeDispatcher.labeled
+      @height = BarcodeDispatcher.height
       @margin = 0
     end
 
