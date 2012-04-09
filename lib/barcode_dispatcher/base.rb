@@ -2,6 +2,7 @@ require 'barby'
 require 'barby/barcode/ean_13'
 require 'barby/outputter/rmagick_outputter'
 require 'rvg/rvg'
+autoload :Prawn, 'prawn'
 
 module BarcodeDispatcher
   class Base
@@ -40,6 +41,10 @@ module BarcodeDispatcher
 
     def to_png
       labeled? ? labeled : barcode.to_png(height: height, margin: margin)
+    end
+
+    def to_pdf
+      ::Prawn::Images::PNG.new(to_png)
     end
 
   private

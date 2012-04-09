@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
 
   s.name = 'barcode_dispatcher'
-  s.version = '0.1.0'
+  s.version = '0.1.1'
   s.date = '2012-04-08'
 
   s.description = "Rack middleware to serve barcodes"
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rmagick', '>= 2.13.1'
   s.add_dependency 'barby', '>= 0.5.0'
   s.add_dependency 'activesupport', '>= 3.0.12'
+  s.add_dependency 'prawn', '>= 0.12.0'
 
   s.require_paths = %w[lib]
   s.rubygems_version = '1.1.1'
