@@ -6,7 +6,7 @@ module BarcodeDispatcher
   autoload :Middleware, 'barcode_dispatcher/middleware'
 
   mattr_accessor :height
-  @@height = 100
+  @@height = 50
 
   mattr_accessor :labeled
   @@labeled = true
