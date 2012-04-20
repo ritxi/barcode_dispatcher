@@ -28,11 +28,11 @@ module BarcodeDispatcher
     end
 
     def code_with_format
-      [].tap { |parts|
+      "#{barcode.checksum}  "+[].tap { |parts|
         code.clone.tap do |code_formated|
-          3.times { parts << code_formated.slice!(0,4) }
+          2.times { parts << code_formated.slice!(0,6) }
         end
-      }.join(' - ')+" #{barcode.checksum}"
+      }.join('  ')
     end
 
     def to_rmagick
