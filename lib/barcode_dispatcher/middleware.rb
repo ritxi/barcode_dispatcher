@@ -9,7 +9,7 @@ module BarcodeDispatcher
       def call(env)
         params = params_for(env)
         code = params.delete(:code)
-        barcode = BarcodeDispatcher::Base.new(code, params)
+        barcode = BarcodeDispatcher.barcode_type.generate(code, params)
 
         begin
           [200, {"Content-Type" => MIME_TYPE}, [barcode.to_png]]
